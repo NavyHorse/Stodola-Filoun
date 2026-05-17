@@ -21,9 +21,10 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Georgia', serif;
+  font-family: 'DM sans', serif;
   color: var(--color-primary);
   background: var(--color-bg-light);
+  overflow-x: hidden; /* Safety net against horizontal scrolling */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -115,10 +116,47 @@ a {
   font-weight: 600;
   text-shadow: 0 3px 12px rgba(0,0,0,0.23);
 }
+.sections-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #ddd1b8;
+  font-size: 1.08rem;
+  padding: 0;
+  background-color: transparent;
+  backdrop-filter: blur(3px);
+  border-top: 1px solid #dbc7a7;
+}
+.sections-nav .nav-item {
+  flex: 1 1 0;
+  text-align: center;
+  padding: 9px 0;
+  color: #fff;
+  letter-spacing: 0.06em;
+  transition: background 0.2s;
+  border-right: 1px solid #dbc7a7;
+}
+.sections-nav .nav-item:last-child { border-right: none; }
+.sections-nav .nav-item span {
+  color: #fff;
+  opacity: 0.85;
+}
+.sections-nav .nav-item.selected,
+.sections-nav .nav-item:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+.nav-arrow {
+  margin-left: 30%;
+  opacity: 0.4;
+  font-size: 1.9rem;
+  font-family: "DM Sans", sans-serif;
+}
 .background-image {
   position: absolute;
   top: 0; left: 0;
-  width: 100vw; height: 100vh;
+  width: 100%; 
+  height: 100vh;
   object-fit: cover;
   z-index: 0;
   filter: brightness(0.6);
@@ -178,46 +216,10 @@ a {
 
 /* === Section 2: Navigation Bar & Centered Content === */
 .top-section {
-  background: linear-gradient(to bottom, #392610b8 60%, var(--color-bg-light) 100%), 
-    url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80') center 0/cover no-repeat;
   position: relative;
   padding-bottom: 30px;
 }
-.sections-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-bottom: 1px solid #ddd1b8;
-  font-size: 1.08rem;
-  padding: 0;
-  background: rgba(60,41,26,0.24);
-}
-.sections-nav .nav-item {
-  flex: 1 1 0;
-  text-align: center;
-  padding: 16px 0;
-  color: #fff;
-  border-right: 1px solid #dbc7a7;
-  letter-spacing: 0.06em;
-  transition: background 0.2s;
-}
-.sections-nav .nav-item:last-child { border-right: none; }
-.sections-nav .nav-item span {
-  color: #fff;
-  opacity: 0.85;
-}
-.sections-nav .nav-item.selected,
-.sections-nav .nav-item:hover {
-  background: rgba(94,72,49,0.12);
-  font-weight: bold;
-  cursor: pointer;
-}
-.nav-arrow {
-  margin: 0 10px;
-  opacity: 0.4;
-  font-size: 1rem;
-  font-family: "DM Sans", sans-serif;
-}
+
 .center-content.sec2 {
   max-width: 780px;
   margin: 0 auto;
@@ -366,7 +368,6 @@ a {
   min-height: 80vh;
   gap: 48px;
   padding: 64px 0;
-  max-width: 1200px;
   margin: 0 auto;
   background: var(--color-bg-dark);
   color: var(--color-secondary);
@@ -455,7 +456,7 @@ a {
 }
 .aktivity-label, .cenik-label {
   color: #ac987d;
-  font-family: Arial,sans-serif;
+  font-family: 'DM sans',sans-serif;
   font-size: 0.92rem;
   letter-spacing: 0.09em;
   text-transform: uppercase;
@@ -465,7 +466,7 @@ a {
   font-size: 2.4rem;
   font-weight: 500;
   margin-bottom: 22px;
-  font-family: 'Georgia', serif;
+  font-family: 'DM sans', serif;
   color: var(--color-primary);
 }
 .aktivity-row {
@@ -495,14 +496,21 @@ a {
   line-height: 1.6;
   margin-top: 8px;
 }
+.odkazynaaktivity {
+  font-weight: bold;
+  text-decoration: underline;
+}
 @media (max-width:850px) {
   .aktivity-row { flex-direction: column; gap: 32px; }
+}
+.cenik-block{
+  padding-top: 4%;
 }
 .cenik-title {
   font-size: 2.1rem;
   font-weight: 500;
   margin-bottom: 17px;
-  font-family: 'Georgia',serif;
+  font-family: 'DM sans',serif;
   color: var(--color-primary);
 }
 .cenik-desc {
@@ -645,7 +653,7 @@ a {
   justify-content: center;
   align-items: flex-start;
   min-height: 70vh;
-  width: 100vw;
+  width: 100%; /* FIXED: Changed from 100vw to prevent horizontal scrollbar layout breaking */
   gap: 36px;
   padding: 48px 0 18px 0;
   background: var(--color-bg-light);
@@ -717,17 +725,18 @@ a {
 }
 .contact-title {
   font-size: 1.35rem;
-  font-family: 'Georgia', serif;
+  font-family: 'DM sans', serif;
   margin: 0 0 9px 0;
   font-weight: 500;
 }
 .contact-info {
+  font-family: 'DM sans', serif;
   font-size: 1.01rem;
   margin-bottom: 16px;
   color: #635131;
 }
 .contact-block { margin-bottom: 16px; }
-.contact-label { color: var(--color-accent); display: block; font-size: 0.94rem; margin-bottom: 2px;}
+.contact-label { color: var(--color-accent); display: block; font-size: 1rem; margin-bottom: 2px;}
 .contact-map-container {
   margin-top: 18px;
   margin-bottom: 7px;
@@ -752,9 +761,9 @@ a {
 }
 .footer {
   margin-top: 64px;
-  width: 100vw;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   color: var(--color-meta);
   font-size: 0.95rem;
   background: none;

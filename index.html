@@ -10,7 +10,7 @@
 <body>
   <!-- SECTION 1 -->
    
-   <img class="background-image" src="/Fotky/DSC02730.jpg" alt="">
+   <img class="background-image" src="Fotky/DSC02730Resize.jpg" alt="">
   <section class="hero">
     <div class="navbar">
       <div class="logo-area">
@@ -20,7 +20,8 @@
       <div class="nav-links">
         <a href="#">Ubytování</a>
 		<a href="#ostatku">O statku</a>
-		<a href="#cenik">Ceník</a>
+		<a href="#aktivity">Aktivity</a>
+    <a href="#cenik">Ceník</a>
 		<a href="#prohlidka">3D prohlídka</a>
         <a href="#kontakt">Kontakt</a>
       </div>
@@ -30,21 +31,22 @@
       <div class="headline">Stylové ubytování v přírodě</div>
       <button class="cta" style="margin-left:0;margin-top:10px;">Rezervovat</button>
     </div>
+     <nav class="sections-nav">
+      <div class="nav-item"><span>01</span> Ubytování
+      <span class="nav-arrow">&#8594;</span></div>
+      <div class="nav-item"><span>02</span> O statku
+      <span class="nav-arrow">&#8594;</span></div>
+      <div class="nav-item"><span>03</span> Ceník
+      <span class="nav-arrow">&#8594;</span></div>
+      <div class="nav-item"><span>04</span> Mapa
+      <span class="nav-arrow">&#8594;</span></div>
+      <div class="nav-item"><span>05</span> Kontakt
+      <span class="nav-arrow">&#8594;</span></div>
+    </nav>
   </section>
 
   <!-- SECTION 2 -->
   <section id="ostatku" class="top-section">
-    <nav class="sections-nav">
-      <div class="nav-item"><span>01</span> Ubytování</div>
-      <span class="nav-arrow">&#8594;</span>
-      <div class="nav-item selected"><span>02</span> O statku</div>
-      <span class="nav-arrow">&#8594;</span>
-      <div class="nav-item"><span>03</span> Ceník</div>
-      <span class="nav-arrow">&#8594;</span>
-      <div class="nav-item"><span>04</span> Mapa</div>
-      <span class="nav-arrow">&#8594;</span>
-      <div class="nav-item"><span>05</span> Kontakt</div>
-    </nav>
     <div class="center-content sec2">
       <div class="subtitle">O statku</div>
       <div class="title sec2">Lorem ipsum dolor sit amet consectetur</div>
@@ -62,7 +64,7 @@
           <div class="section-label">Ubytování</div>
           <div class="title sec3">Lorem ipsum dolor</div>
         </div>
-        <a class="header-link" href="#">Ceník</a>
+        <a class="header-link" href="#cenik">Ceník</a>
       </div>
       <div class="gallery-row">
         <div class="room-card">
@@ -110,7 +112,7 @@
 <section class="activities-section">
   <div class="activities-content">
     <!-- Aktivity -->
-    <div class="activities-block" style="margin-bottom:60px;">
+    <div id="aktivity" class="activities-block" style="margin-bottom:60px;">
       <div class="aktivity-label">Aktivity</div>
       <div class="aktivity-title">Lorem ipsum dolor sit</div>
       <div class="aktivity-row">
@@ -118,27 +120,30 @@
           <div class="aktivita-number">01</div>
           <div class="aktivita-name">Lorem ipsum</div>
           <div class="aktivita-desc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. <br>
+            <a class="odkazynaaktivity" href="#">Zjistit více</a>
           </div>
         </div>
         <div class="aktivita-column">
           <div class="aktivita-number">02</div>
           <div class="aktivita-name">Lorem ipsum</div>
           <div class="aktivita-desc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. <br>
+            <a class="odkazynaaktivity" href="#">Zjistit více</a>
           </div>
         </div>
         <div class="aktivita-column">
           <div class="aktivita-number">03</div>
           <div class="aktivita-name">Lorem ipsum</div>
           <div class="aktivita-desc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. <br>
+            <a class="odkazynaaktivity" href="#">Zjistit více</a>
           </div>
         </div>
       </div>
     </div>
     <!-- Ceník -->
-    <div class="cenik-block">
+    <div id="cenik" class="cenik-block">
       <div class="cenik-label">Ceník</div>
       <div class="cenik-title">Lorem ipsum</div>
       <div class="cenik-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
@@ -206,8 +211,7 @@
   <!-- SECTION 6 -->
   <section>
     <div id="kontakt" class="main-wrapper">
-      <!-- Left column: Form -->
-      <div class="left-col">
+      <!--  <div class="left-col">
         <div class="form-section-label">Booking</div>
         <div class="form-title">Rezervace pobytu</div>
         <div class="form-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
@@ -241,18 +245,20 @@
           </div>
           <button type="submit" class="submit-btn">Odeslat rezervaci</button>
         </form>
-      </div>
+      </div>-->
       <!-- Right column: Contact and Map -->
       <div class="right-col">
         <div class="contact-section-label">Kontakt</div>
-        <div class="contact-title">Lorem ipsum</div>
+        <div class="contact-title">Josef Soudek</div>
         <div class="contact-block">
           <span class="contact-label">Adresa</span>
-          <div class="contact-info">Lorem ipsum 14, 000 00 Dolor</div>
+          <div class="contact-info">468 46 Plavy</div>
+          <span class="contact-label">GPS</span>
+          <div class="contact-info">50.70095415944699 <br> 15.309968299501014</div>
           <span class="contact-label">Telefon</span>
-          <div class="contact-info">+420 000 000 000</div>
+          <div class="contact-info">+420 602 353 513</div>
           <span class="contact-label">E-mail</span>
-          <div class="contact-info">info@example.cz</div>
+          <div class="contact-info">info@penzionfiloun.cz</div>
         </div>
         <div class="contact-section-label">Mapa</div>
         <div class="contact-map-container">
