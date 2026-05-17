@@ -212,6 +212,9 @@ a {
   .hero .center-content h1 { font-size: 1.5rem; }
   .hero .headline { font-size: 2rem; }
   .hero .nav-links { gap: 12px; }
+  .sections-nav { font-size: 0.5rem;}
+  .nav-arrow { font-size: 0.5rem;
+  }
 }
 
 /* === Section 2: Navigation Bar & Centered Content === */
@@ -241,7 +244,7 @@ a {
 }
 .title.sec2 {
   font-size: 2.7rem;
-  font-family: 'Georgia', serif;
+  font-family: 'DM sans', serif;
   margin: 0 0 32px 0;
   color: var(--color-primary);
   font-weight: 500;
@@ -290,7 +293,7 @@ a {
 .title.sec3 {
   font-size: 2.4rem;
   margin: 0;
-  font-family: 'Georgia', serif;
+  font-family: 'DM sans', serif;
   font-weight: 500;
   letter-spacing: -0.01em;
   color: var(--color-primary);
@@ -304,7 +307,7 @@ a {
 }
 .gallery-row {
   display: flex;
-  gap: 3vw;
+  gap: 12vw;
   margin-top: 18px;
   flex-wrap: wrap;
 }
@@ -318,7 +321,7 @@ a {
   padding-bottom: 19px;
   display: flex;
   flex-direction: column;
-  font-family: Georgia, serif;
+  font-family: DM sans, serif;
   margin-bottom: 32px;
   box-shadow: 0 4px 18px 0 rgba(116,103,89,0.04);
 }
@@ -360,7 +363,7 @@ a {
   .title.sec3 { font-size: 1.13rem; }
 }
 
-/* === Section 4: Two-column dark, food === */
+/*Section 4*/
 .container.sec4 {
   display: flex;
   justify-content: center;
@@ -505,6 +508,7 @@ a {
 }
 .cenik-block{
   padding-top: 4%;
+  justify-content: center;
 }
 .cenik-title {
   font-size: 2.1rem;
@@ -620,7 +624,7 @@ a {
 }
 .tour-degree {
   font-size: 2.3rem;
-  font-family: 'Georgia', serif;
+  font-family: 'DM sans', serif;
   font-weight: 400;
   letter-spacing: .01em;
 }
@@ -644,6 +648,9 @@ a {
   .tour-box { height: 250px; min-height: 120px; }
   .tour-degree { font-size: 1.4rem; }
   .header-left { padding-left: 5vw;}
+}
+@media (max-width: 600px) {
+  .fullscreen-btn { align-items: center; }
 }
 
 /* === Section 6: Booking/Contact 2-col + Map === */
@@ -674,7 +681,7 @@ a {
   font-size: 2.1rem;
   font-weight: 500;
   margin-bottom: 6px;
-  font-family: 'Georgia', serif;
+  font-family: 'DM sans', serif;
 }
 .form-desc {
   color: #77604b;
@@ -760,7 +767,7 @@ a {
   .left-col, .right-col { max-width: 97vw; padding: 0; }
 }
 .footer {
-  margin-top: 64px;
+  margin-top: 34px;
   width: 100%;
   display: flex;
   justify-content: center;
