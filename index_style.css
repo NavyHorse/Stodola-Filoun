@@ -205,15 +205,43 @@ a {
   }
 }
 @media (max-width: 600px) {
-	.hero .nav-links {
+  /* Navbar: vertical spacing, all centered */
+  .hero .navbar {
     flex-direction: column;
-    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 14px 8px 0 8px;
   }
-  .hero .center-content h1 { font-size: 1.5rem; }
-  .hero .headline { font-size: 2rem; }
-  .hero .nav-links { gap: 12px; }
-  .sections-nav { font-size: 0.3rem;}
-  .nav-arrow { font-size: 0.3rem;
+  .hero .logo-area {
+    justify-content: center;
+    margin-bottom: 7px;
+  }
+  .hero .nav-links {
+    display: flex;
+    flex-wrap: wrap;                 /* allow links to wrap! */
+    justify-content: center;         /* center horizontally */
+    align-items: center;
+    gap: 7px 14px;                   /* vertical and horizontal gaps */
+    width: 100vw;
+    margin: 0;
+  }
+  .hero .nav-links a {
+    flex: 1 0 100px;                 /* flexible min width so a long link can wrap */
+    text-align: center;
+    min-width: 80px;
+    max-width: 95vw;
+    white-space: nowrap;
+    font-size: 1.05rem;              /* a little smaller font */
+    padding: 7px 8px;
+  }
+}
+
+@media (max-width: 450px) {
+  .hero .nav-links a {
+    font-size: 0.97rem;
+    padding: 7px 2px;
+    min-width: 60px;
   }
 }
 
@@ -650,7 +678,17 @@ a {
   .header-left { padding-left: 5vw;}
 }
 @media (max-width: 600px) {
-  .fullscreen-btn { align-items: center; }
+  .fullscreen-btn {
+    display: block;
+    margin: 18px auto 3px auto; /* top/right/bottom/left: center! */
+    float: none;
+  }
+  .prohlidka-header {
+    flex-direction: column;
+    align-items: center !important;
+    text-align: center;
+    gap: 0.5em;
+  }
 }
 
 /* === Section 6: Booking/Contact 2-col + Map === */
